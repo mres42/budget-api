@@ -1,0 +1,16 @@
+{
+    "name": "mres/budget-api",
+    "description": "budget api",
+    "require": {
+        "slim/psr7": "^1.7",
+        "slim/slim": "4.*"
+    },
+    "scripts": {
+        "dev": "php -S localhost:8000 -t public"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    }
+}
