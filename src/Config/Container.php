@@ -1,5 +1,4 @@
 <?php
-// src/Config/container.php
 
 use DI\Container;
 use App\Config\Database;

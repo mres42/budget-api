@@ -15,7 +15,7 @@ class UserRepository implements UserRepositoryInterface
 
     public function list(): array
     {
-        $sql = "SELECT * FROM budget_api.users;";
+        $sql = "SELECT * FROM users;";
         $stmt = $this->db->prepare($sql);
         $stmt->execute();
         $result = $stmt->fetchAll(\PDO::FETCH_ASSOC);
