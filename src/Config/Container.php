@@ -10,20 +10,20 @@ use App\Module\v1\Users\Controllers\UserController;
 $container = new Container();
 
 // PDO instance
-$container->set(\PDO::class, function () {
+$container->set(\PDO::class, function (): \PDO {
     return Database::getInstance()->getConnection();
 });
 
-// user Dependencies
-$container->set(UserRepository::class, function ($c) {
+// User Dependencies
+$container->set(UserRepository::class, function ($c): UserRepository {
     return new UserRepository($c->get(\PDO::class));
 });
 
-$container->set(UserService::class, function ($c) {
+$container->set(UserService::class, function ($c): UserService {
     return new UserService($c->get(UserRepository::class));
 });
 
-$container->set(UserController::class, function ($c) {
+$container->set(UserController::class, function ($c): UserController {
     return new UserController($c->get(UserService::class));
 });
 
