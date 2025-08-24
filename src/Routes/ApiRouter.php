@@ -3,7 +3,8 @@
 namespace App\Routes;
 
 use Slim\App;
-use App\Controllers\HelloWorldController;
+use App\Module\v1\Users\Controllers\HelloWorldController;
+use App\Module\v1\Users\Controllers\UserController;
 
 class ApiRouter
 {
@@ -16,8 +17,7 @@ class ApiRouter
 
     public function registerRoutes(): void
     {
-        $helloController = new HelloWorldController();
-
-        $this->app->get('/hello', [$helloController, 'hello']);
+        // User Routes
+        $this->app->get('/users', [UserController::class, 'index']);
     }
 }
