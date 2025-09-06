@@ -2,9 +2,9 @@
 
 use DI\Container;
 use App\Config\Database;
-use App\Module\v1\Users\Repository\UserRepository;
-use App\Module\v1\Users\Services\UserService;
-use App\Module\v1\Users\Controllers\UserController;
+use App\Module\v1\User\Repository\UserRepository;
+use App\Module\v1\User\Service\UserService;
+use App\Module\v1\User\Controller\UserController;
 
 $container = new Container();
 

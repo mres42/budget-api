@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Module\V1\Users\Controllers;
+namespace App\Module\v1\User\Controller;
 
-use App\Module\v1\Users\Services\UserService;
+use App\Module\v1\User\Service\UserService;
 use Slim\Psr7\Response;
 use Slim\Psr7\Request;
 
